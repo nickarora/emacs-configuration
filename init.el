@@ -40,7 +40,12 @@
 (add-hook 'after-init-hook #'elpaca-process-queues)
 (elpaca `(,@elpaca-order))
 
-;; Prevent Custom from modifying this file.
-(setq custom-file (expand-file-name
-                   (format "custom-%d-%d.el" (emacs-pid) (random))
-                   temporary-file-directory))
+;; Configure Use Package to use Elpaca
+(elpaca elpaca-use-package
+  (elpaca-use-package-mode))
+
+;; Install Emacs Literate Config
+(use-package literate-config
+  :ensure (:wait t :host github :repo "aaronjensen/emacs-literate-config" :protocol ssh))
+
+(literate-config-init)
