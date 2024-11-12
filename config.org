@@ -23,3 +23,12 @@ and =etc= subdirectories so that they can be included in =.gitignore=
 (use-package no-littering
   :ensure (:wait t))
 #+end_src
+
+* Startup Time
+
+#+begin_src emacs-lisp
+(add-hook 'after-init-hook
+          (lambda ()
+            (let ((inhibit-message t))
+              (message "Emacs init time: %s" (emacs-init-time)))))
+#+end_src
