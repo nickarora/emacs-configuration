@@ -13,3 +13,13 @@ not be persisted across sessions.
                    (format "custom-%d-%d.el" (emacs-pid) (random))
                    temporary-file-directory))
 #+end_src
+
+** No Littering
+
+Move all common files typically written to the =user-emacs-directory= to the =var=
+and =etc= subdirectories so that they can be included in =.gitignore=
+
+#+begin_src emacs-lisp
+(use-package no-littering
+  :ensure (:wait t))
+#+end_src
