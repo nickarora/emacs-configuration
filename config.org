@@ -89,6 +89,22 @@ popup.
   (which-key-mode))
 #+end_src
 
+** Helpful
+
+Helpful is an alternative to the built-in Emacs help that provides
+much more contextual information.
+
+#+begin_src emacs-lisp
+(use-package helpful
+  :bind (
+         ;; Remap standard commands
+         ([remap describe-function] . #'helpful-callable)
+         ([remap describe-command] . #'helpful-command)
+         ([remap describe-variable] . #'helpful-variable)
+         ([remap describe-symbol] . #'helpful-symbol)
+         ([remap describe-key] . #'helpful-key)))
+#+end_src
+
 * Startup Time
 
 #+begin_src emacs-lisp
