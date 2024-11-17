@@ -75,6 +75,14 @@ Command and other menu history is saved.
   (savehist-mode))
 #+end_src
 
+** Autofill
+
+Set default width of fill mode to 80 columns.
+
+#+begin_src emacs-lisp
+(setq-default fill-column 80)
+#+end_src
+
 * Assistance
 
 ** Which Key
