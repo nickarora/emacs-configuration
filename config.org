@@ -166,6 +166,18 @@ separated by spaces. For example, "som thi" will match "this-is-some-thing".
   (setq sh-basic-offset 2))
 #+end_src
 
+
+** Markdown
+
+#+begin_src emacs-lisp
+(use-package markdown-mode
+  :config
+  (add-hook 'markdown-mode #'visual-line-mode)
+  (add-hook 'markdown-mode #'visual-wrap-prefix-mode)
+
+  (setq markdown-list-indent-width 2))
+#+end_src
+
 * Startup Time
 
 #+begin_src emacs-lisp
