@@ -65,6 +65,16 @@ Do not allow the cursor in the minibuffer prompt.
 (add-hook 'minibuffer-setup-hook #'cursor-intangible-mode)
 #+end_src
 
+** Save History
+
+Command and other menu history is saved.
+
+#+begin_src emacs-lisp
+(use-feature savehist
+  :init
+  (savehist-mode))
+#+end_src
+
 * Startup Time
 
 #+begin_src emacs-lisp
