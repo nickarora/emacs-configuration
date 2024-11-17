@@ -75,6 +75,20 @@ Command and other menu history is saved.
   (savehist-mode))
 #+end_src
 
+* Assistance
+
+** Which Key
+
+Which-key is a minor mode for Emacs that displays the key bindings
+following your currently entered incomplete command (a prefix) in a
+popup.
+
+#+begin_src emacs-lisp
+(use-feature which-key
+  :init
+  (which-key-mode))
+#+end_src
+
 * Startup Time
 
 #+begin_src emacs-lisp
