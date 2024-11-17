@@ -125,12 +125,25 @@ the default completion system.
 
 ** Consult
 
-Consult provides search and navigation commands based on the Emacs
-completion function completing-read.
+Consult provides search and navigation commands based on the Emacs completion
+function completing-read.
 
 #+begin_src emacs-lisp
 (use-package consult
   :bind (("C-x b" . consult-buffer)))
+#+end_src
+
+** Orderless
+
+The orderless completion style allows typing parts of what is being matched,
+separated by spaces. For example, "som thi" will match "this-is-some-thing".
+
+#+begin_src emacs-lisp
+(use-package orderless
+  :init
+  (setq completion-styles '(orderless basic)
+        completion-category-defaults nil
+        completion-category-overrides '((file (styles partial-completion)))))
 #+end_src
 
 * Startup Time
