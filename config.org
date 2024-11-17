@@ -156,6 +156,16 @@ separated by spaces. For example, "som thi" will match "this-is-some-thing".
         completion-category-overrides '((file (styles partial-completion)))))
 #+end_src
 
+* File Types
+
+** Shell
+
+#+begin_src emacs-lisp
+(use-feature shell
+  :config
+  (setq sh-basic-offset 2))
+#+end_src
+
 * Startup Time
 
 #+begin_src emacs-lisp
