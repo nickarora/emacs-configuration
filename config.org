@@ -118,6 +118,16 @@ based on the default completion system.
   (vertico-mode))
 #+end_src
 
+** Consult
+
+Consult provides search and navigation commands based on the Emacs
+completion function completing-read.
+
+#+begin_src emacs-lisp
+(use-package consult
+  :bind (("C-x b" . consult-buffer)))
+#+end_src
+
 * Startup Time
 
 #+begin_src emacs-lisp
