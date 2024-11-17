@@ -1,4 +1,3 @@
-
 #+title: Emacs Config
 
 * Package Management
@@ -11,8 +10,8 @@ Install packages by default when configured with use-package.
   (setq use-package-always-ensure t)
 #+end_src
 
-Macro to use to configure built-in featues, rather than packages that
-do not need to be installed
+Macro to use to configure built-in featues, rather than packages that do not
+need to be installed
 
 #+begin_src emacs-lisp
 (defmacro use-feature (name &rest args)
@@ -27,9 +26,9 @@ do not need to be installed
 
 ** Customization Saving
 
-Do not save customizations in =init.el=, instead save them in a
-temporary file that will be discarded. As a result, any customizations
-made in a session will not be persisted across sessions.
+Do not save customizations in =init.el=, instead save them in a temporary file
+that will be discarded. As a result, any customizations made in a session will
+not be persisted across sessions.
 
 #+begin_src emacs-lisp
 (setq custom-file (expand-file-name
@@ -39,9 +38,8 @@ made in a session will not be persisted across sessions.
 
 ** No Littering
 
-Move all common files typically written to the =user-emacs-directory=
-to the =var= and =etc= subdirectories so that they can be included in
-=.gitignore=
+Move all common files typically written to the =user-emacs-directory= to the
+=var= and =etc= subdirectories so that they can be included in =.gitignore=
 
 #+begin_src emacs-lisp
 (use-package no-littering
@@ -87,9 +85,8 @@ Set default width of fill mode to 80 columns.
 
 ** Which Key
 
-Which-key is a minor mode for Emacs that displays the key bindings
-following your currently entered incomplete command (a prefix) in a
-popup.
+Which-key is a minor mode for Emacs that displays the key bindings following
+your currently entered incomplete command (a prefix) in a popup.
 
 #+begin_src emacs-lisp
 (use-feature which-key
@@ -99,8 +96,8 @@ popup.
 
 ** Helpful
 
-Helpful is an alternative to the built-in Emacs help that provides
-much more contextual information.
+Helpful is an alternative to the built-in Emacs help that provides much more
+contextual information.
 
 #+begin_src emacs-lisp
 (use-package helpful
@@ -117,8 +114,8 @@ much more contextual information.
 
 ** Completion Menu (Vertico)
 
-Vertico provides a performant and minimalistic vertical completion UI
-based on the default completion system.
+Vertico provides a performant and minimalistic vertical completion UI based on
+the default completion system.
 
 #+begin_src emacs-lisp
 (use-package vertico
