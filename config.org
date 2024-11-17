@@ -105,6 +105,19 @@ much more contextual information.
          ([remap describe-key] . #'helpful-key)))
 #+end_src
 
+* User Interface
+
+** Completion Menu (Vertico)
+
+Vertico provides a performant and minimalistic vertical completion UI
+based on the default completion system.
+
+#+begin_src emacs-lisp
+(use-package vertico
+  :init
+  (vertico-mode))
+#+end_src
+
 * Startup Time
 
 #+begin_src emacs-lisp
