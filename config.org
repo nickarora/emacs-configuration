@@ -133,6 +133,18 @@ the default completion system.
   (vertico-mode))
 #+end_src
 
+** Completion Menu Annotations (Marginalia)
+
+Marginalia adds annotations to minibuffer completions.
+
+#+begin_src emacs-lisp
+(use-package marginalia
+  :bind (:map minibuffer-local-map ("M-A" . marginalia-cycle))
+
+  :init
+  (marginalia-mode))
+#+end_src
+
 ** Consult
 
 Consult provides search and navigation commands based on the Emacs completion
