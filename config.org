@@ -10,7 +10,7 @@ Install packages by default when configured with use-package.
   (setq use-package-always-ensure t)
 #+end_src
 
-Macro to use to configure built-in featues, rather than packages that do not
+Macro to use to configure built-in features, rather than packages that do not
 need to be installed
 
 #+begin_src emacs-lisp
