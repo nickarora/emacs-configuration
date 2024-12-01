@@ -275,7 +275,7 @@ function completing-read.
   :bind (("C-x b" . consult-buffer)))
 #+end_src
 
-** Orderless
+** Completion Style (Orderless)
 
 The orderless completion style allows typing parts of what is being matched,
 separated by spaces. For example, "som thi" will match "this-is-some-thing".
