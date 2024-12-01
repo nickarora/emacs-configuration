@@ -211,6 +211,21 @@ separated by spaces. For example, "som thi" will match "this-is-some-thing".
   (setq markdown-list-indent-width 2))
 #+end_src
 
+* Programming
+
+** Go To Definition (Dumb Jump)
+
+Find potential definitions of a function of variable under point
+
+#+begin_src emacs-lisp
+(use-package dumb-jump
+  :init
+  (add-hook 'xref-backend-functions #'dumb-jump-xref-activate)
+  (setq xref-show-definitions-function #'xref-show-definitions-completing-read)
+
+  (setq dumb-jump-force-searcher 'rg))
+#+end_src
+
 * Verion Control
 
 ** Magit
