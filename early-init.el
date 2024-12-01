@@ -12,3 +12,6 @@
        (list
         `(font . ,(concat c/monospace-font "-" (number-to-string c/monospace-font-size))))
        default-frame-alist))
+
+;; Prevent the frame from being resized when font size is changed
+(setq frame-inhibit-implied-resize t)
