@@ -91,6 +91,16 @@ Two space indentation by default.
               smie-indent-basic 2)
 #+end_src
 
+* Org Mode Settings
+
+** Start Folded
+
+Start an org file with all headers collapsed
+
+#+begin_src emacs-lisp
+(setq org-startup-folded t)
+#+end_src
+
 * Assistance
 
 ** Which Key
