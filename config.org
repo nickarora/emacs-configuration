@@ -381,7 +381,6 @@ Add =:capf= and =:compdef= to =use-package=
   (setq sh-basic-offset 2))
 #+end_src
 
-
 ** Markdown
 
 #+begin_src emacs-lisp
