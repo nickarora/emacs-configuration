@@ -1,4 +1,4 @@
-#+title: Emacs Config
+#+title: Emacs Configuration
 
 * Package Management
 
