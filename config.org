@@ -419,11 +419,23 @@ Edit the grep buffer and store in the file buffer
 
 ** Tree Viewer (Treemacs)
 
+Tree layout file explorer
+
 #+begin_src emacs-lisp
 (use-package treemacs
   :bind ("s-b" . #'treemacs)
   :config
   (treemacs-follow-mode))
+#+end_src
+
+Allow Treemacs buffers to be unique inside the active tab instead of the default frame-based buffer scope
+
+#+begin_src emacs-lisp
+(use-package treemacs-tab-bar
+  :after (treemacs)
+  :demand t
+  :config
+  (treemacs-set-scope-type 'Tabs))
 #+end_src
 
 ** Workspaces (Tabspaces)
